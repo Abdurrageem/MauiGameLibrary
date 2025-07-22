@@ -1,5 +1,7 @@
-﻿using MauiGameLibrary.Views;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.Logging;
+using MauiGameLibrary.Views;
+using MauiGameLibrary.ViewModels;
+using MauiGameLibrary.Services;
 
 namespace MauiGameLibrary
 {
@@ -17,10 +19,12 @@ namespace MauiGameLibrary
                 });
 
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
-            builder.Services.AddTransient<ListOfGamesView>();
 
+            builder.Services.AddTransient<ListOfGamesView>();
+            builder.Services.AddTransient<ListOfGamesViewModel>();
+            builder.Services.AddSingleton<GameDataService>();
 
             return builder.Build();
         }

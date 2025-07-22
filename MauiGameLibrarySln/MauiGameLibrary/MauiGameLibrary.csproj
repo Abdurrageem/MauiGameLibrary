@@ -65,9 +65,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="ViewModels\ListOfGamesViewModel.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
 	  <MauiXaml Update="Views\ListOfGamesView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

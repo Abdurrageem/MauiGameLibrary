@@ -11,7 +11,10 @@ namespace MauiGameLibrary.Services
     public class GameDataService
     {
         private List<GameInformation> _gameInformation = new List<GameInformation>();
-
+        public GameDataService()
+        {
+            CreateFakeGameInformation();
+        }
         public List<GameInformation> GetAllGameInformation()
         {
             return _gameInformation;
@@ -28,7 +31,7 @@ namespace MauiGameLibrary.Services
                 AgeRestriction = "E10+",
                 Multiplayer = false,
                 Description = "An open-world action-adventure game set in the kingdom of Hyrule.",
-                Image = "zelda.jpg",
+                Image = "zelda.png",
                 YearPublished = new DateTime(2017, 3, 3)
             });
             _gameInformation.Add(new GameInformation
@@ -41,7 +44,7 @@ namespace MauiGameLibrary.Services
                 AgeRestriction = "E",
                 Multiplayer = false,
                 Description = "A 3D platformer where Mario travels across various kingdoms to rescue Princess Peach.",
-                Image = "mario.jpg",
+                Image = "mario.png",
                 YearPublished = new DateTime(2017, 10, 27)
             });
         }
