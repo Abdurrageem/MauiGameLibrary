@@ -19,11 +19,13 @@ namespace MauiGameLibrary
                 });
 
 #if DEBUG
-            builder.Logging.AddDebug();
+    		builder.Logging.AddDebug();
 #endif
 
             builder.Services.AddTransient<ListOfGamesView>();
             builder.Services.AddTransient<ListOfGamesViewModel>();
+            builder.Services.AddTransient<UpdateGameView>();
+            builder.Services.AddTransient<UpdateGameViewModel>();
             builder.Services.AddSingleton<GameDataService>();
 
             return builder.Build();
