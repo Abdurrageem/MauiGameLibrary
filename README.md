@@ -1,6 +1,6 @@
 #  MAUI Game Library
 
-##  Personal Project — Software Development Portfolio
+##  Class Assignment
 
 A cross-platform mobile app built using **.NET MAUI**, designed to help users catalog and manage their personal video game collection. This application supports key features such as real-time input validation, media integration for cover images, and a modern Material Design UI.
 
