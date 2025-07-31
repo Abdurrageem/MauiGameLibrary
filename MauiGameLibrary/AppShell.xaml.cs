@@ -1,4 +1,5 @@
-﻿namespace MauiGameLibrary
+﻿
+namespace MauiGameLibrary
 {
     public partial class AppShell : Shell
     {
@@ -11,8 +12,9 @@
 
         private void RegisterRoutes()
         {
-            
-            Routing.RegisterRoute("updategameroute", typeof(Views.UpdateGameView));
+           Routing.RegisterRoute("updategameroute", typeof(Views.UpdateGameView));
         }
+
+     
     }
 }

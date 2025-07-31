@@ -1,4 +1,5 @@
 using MauiGameLibrary.ViewModels;
+
 namespace MauiGameLibrary.Views;
 
 public partial class BasePage : ContentPage
@@ -13,9 +14,11 @@ public partial class BasePage : ContentPage
         base.OnAppearing();
 
         BaseViewModel vm = BindingContext as BaseViewModel;
+
         if (vm != null)
         {
             vm.OnAppearing();
         }
+
     }
 }

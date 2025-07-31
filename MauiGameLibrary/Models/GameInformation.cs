@@ -10,7 +10,6 @@ namespace MauiGameLibrary.Models
     {
         public string Id { get; set; }
         public string Title { get; set; }
-
         public string GameType { get; set; }
 
         public string CompanyName { get; set; }
@@ -26,5 +25,7 @@ namespace MauiGameLibrary.Models
         public string Image { get; set; }
 
         public DateTime YearPublished { get; set; }
+
+    
     }
 }

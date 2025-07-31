@@ -4,7 +4,6 @@ namespace MauiGameLibrary.Views;
 
 public partial class UpdateGameView : BasePage
 {
-	
 	public UpdateGameView(UpdateGameViewModel vm)
 	{
 		InitializeComponent();
@@ -12,5 +11,5 @@ public partial class UpdateGameView : BasePage
 		BindingContext = vm;
 	}
 
-    
+   
 }

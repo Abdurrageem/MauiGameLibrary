@@ -1,7 +1,8 @@
-﻿using Microsoft.Extensions.Logging;
-using MauiGameLibrary.Views;
-using MauiGameLibrary.ViewModels;
+﻿using CommunityToolkit.Maui;
 using MauiGameLibrary.Services;
+using MauiGameLibrary.ViewModels;
+using MauiGameLibrary.Views;
+using Microsoft.Extensions.Logging;
 
 namespace MauiGameLibrary
 {
@@ -12,6 +13,7 @@ namespace MauiGameLibrary
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .UseMauiCommunityToolkit()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -24,8 +26,11 @@ namespace MauiGameLibrary
 
             builder.Services.AddTransient<ListOfGamesView>();
             builder.Services.AddTransient<ListOfGamesViewModel>();
+
             builder.Services.AddTransient<UpdateGameView>();
             builder.Services.AddTransient<UpdateGameViewModel>();
+
+
             builder.Services.AddSingleton<GameDataService>();
 
             return builder.Build();

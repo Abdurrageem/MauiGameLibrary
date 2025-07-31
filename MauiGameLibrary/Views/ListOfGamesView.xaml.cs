@@ -1,13 +1,24 @@
-namespace MauiGameLibrary.Views;
-using ViewModels;
+using MauiGameLibrary.ViewModels;
 
-public partial class ListOfGamesView : ContentPage
+namespace MauiGameLibrary.Views;
+
+public partial class ListOfGamesView : BasePage
 {
+	private ListOfGamesViewModel _viewModel;
+
 	public ListOfGamesView(ListOfGamesViewModel vm)
 	{
 		InitializeComponent();
 
-		BindingContext = vm;	
-	}
+		_viewModel = vm;
+		BindingContext = vm;
+    }
 
+	protected override void OnAppearing()
+	{
+		base.OnAppearing();
+		
+		// Explicitly refresh the games list when the view appears
+		_viewModel?.RefreshGames();
+	}
 }

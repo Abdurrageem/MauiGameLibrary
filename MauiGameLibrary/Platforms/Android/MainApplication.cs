@@ -3,7 +3,7 @@ using Android.Runtime;
 
 namespace MauiGameLibrary
 {
-    [Application]
+    [Application(Theme = "@style/Maui.MainTheme")]
     public class MainApplication : MauiApplication
     {
         public MainApplication(IntPtr handle, JniHandleOwnership ownership)
